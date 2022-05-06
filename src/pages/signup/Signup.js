@@ -6,7 +6,7 @@ export default function Signup() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [displayName, setDisplayName] = useState('')
-  const { signup, error, isPendding } = useSignup()
+  const { signup, error, isPending } = useSignup()
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -46,8 +46,8 @@ export default function Signup() {
         />
       </label>
 
-      {!isPendding &&<button className='btn' type='submit'>Sign Up</button>}
-      {isPendding && <button className='btn' disabled>Loading</button>}
+      {!isPending &&<button className='btn' type='submit'>Sign Up</button>}
+      {isPending && <button className='btn' disabled>Loading</button>}
       {error && <p className='error'>{error}</p>}
 
     </form>
