@@ -12,7 +12,6 @@ export const useSignup = () => {
     const signup = async ({ email, password, displayName }) => {
         setIsPending(true)
         setError(null)
-        console.log({email, password, displayName})
 
         try{
             const res = await projectAuth.createUserWithEmailAndPassword(email, password)
