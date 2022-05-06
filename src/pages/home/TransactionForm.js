@@ -24,7 +24,8 @@ export default function TransactionForm({ uid }) {
 
 
     return (
-        <div>Add Transaction
+        <div>
+            <h3>Add Transaction</h3>
 
             <form onSubmit={handleSubmit}>
                 <label>
